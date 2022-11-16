@@ -2,13 +2,13 @@
 #define NUM_SIZE sizeof(int)*4  //32 bits 
 void main()
 {
-	int x,count=0,i,msb;
+	int x,count=0,i,msb; // 0000 0000 0000 1010
 	printf("Enter the number:");
 	scanf("%d",&x);
-	msb=1<<(NUM_SIZE-1);
+	msb=1<<(NUM_SIZE-1);//1000 0000 0000 0000 
 	for(i=0;i<NUM_SIZE;i++)
 	{
-		if((x<<i)&msb)
+		if((x<<i)&msb) 
 		{
 			break;
 		}
