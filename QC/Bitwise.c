@@ -10,7 +10,7 @@ void LSB(int num)
 void MSB(int num)
 {
 	int msb;
-	msb = 1 >> (BITS - 1);
+	msb = 1 >> (BITS - 1); 
 	if(num & msb)
 		printf("MSB bit %d is set\n",num);
 	else

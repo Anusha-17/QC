@@ -1,9 +1,14 @@
 #include<stdio.h>
+//Bit size is 8(4*2)
 #define BITS sizeof(int)*2
+//To set a bit on particular position
 #define bitset(byte,nbit)   ((byte) |=  (1<<(nbit)))
+//To clear a bit on particular position
 #define bitclear(byte,nbit) ((byte) &= ~(1<<(nbit)))
+//To toggle a bit on particular position
 #define bittoggle(byte,nbit) (byte ^ (1<<nbit));
-#define LSBcheck(byte) (byte & 1)
+//
+#define LSBcheck(byte) (byte & 1) 
 #define MSBcheck(byte) (byte & (1 >> (BITS - 1)))
 #define bitget(byte,nbit) ((byte << nbit) & 1)
 #define evenodd(byte) (byte & 1)
